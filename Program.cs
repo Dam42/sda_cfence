@@ -21,7 +21,7 @@ namespace sda_cfence
             int temp = 0;
             for (int i = 0; i < numbers.Length - 1; i++)
             {
-                for (int j = 0; j < numbers.Length - 1; j++)
+                for (int j = 0; j < numbers.Length - (i + 1); j++)
                 {
                     if (numbers[j] > numbers[j + 1])
                     {
