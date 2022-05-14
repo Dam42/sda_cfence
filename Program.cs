@@ -13,7 +13,7 @@ namespace sda_cfence
 
         static bool Verify(string pass)
         {
-            if ( IsLong(pass) && HasNumber(pass) && HasSpecial(pass)) return true;
+            if ( IsLong(pass) && HasNumber(pass) && HasSpecial(pass) && HasUpperCase(pass) && HasLowerCase(pass)) return true;
             return false;
         }
 
@@ -26,6 +26,18 @@ namespace sda_cfence
         {
             char[] chPass = pass.ToCharArray();
             foreach (char c in chPass) if (char.IsDigit(c)) return true;
+            return false;
+        }
+        static bool HasUpperCase(string pass)
+        {
+            char[] chPass = pass.ToCharArray();
+            foreach (char c in chPass) if (char.IsUpper(c)) return true;
+            return false;
+        }
+        static bool HasLowerCase(string pass)
+        {
+            char[] chPass = pass.ToCharArray();
+            foreach (char c in chPass) if (char.IsLower(c)) return true;
             return false;
         }
         static bool HasSpecial(string pass)
