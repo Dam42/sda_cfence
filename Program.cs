@@ -6,7 +6,7 @@ namespace sda_cfence
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Insert numamber and power to which you want it to be raised");
+            Console.WriteLine("Insert a number and power to which you want it to be raised");
             int num = Convert.ToInt32(Console.ReadLine());
             int pow = Convert.ToInt32(Console.ReadLine());
 
@@ -16,11 +16,8 @@ namespace sda_cfence
         static int Power(int num, int pow)
         {
             int result = num;
-            while (pow > 1) {
-                result *= num;
-                pow--;
-            }
-            return result;
+            if (pow != 0) return num * Power(num, pow - 1);
+            return 1;
         }
     }
 }
