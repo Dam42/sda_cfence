@@ -2,11 +2,35 @@
 
 namespace sda_cfence
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[] numbers = { 5, 8, 11, 15, 2, 9, 10, 51, 3, 100, 4, 9, 18 };
+
+            foreach (int num in numbers) Console.Write($"{num} ");
+            Console.WriteLine();
+            sort(numbers);
+            foreach (int num in numbers) Console.Write($"{num} ");
+        }
+
+        static void sort(int[] numbers)
+        {
+            int temp = 0;
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                for (int j = 0; j < numbers.Length - 1; j++)
+                {
+                    if (numbers[j] > numbers[j + 1])
+                    {
+                        temp = numbers[j + 1];
+                        numbers[j + 1] = numbers[j];
+                        numbers[j] = temp;
+                        temp = 0;
+                        // To by wypadało w sumie zapisać w funkcji swap() czy coś takiego, ale whatever.
+                    }
+                }
+            }
         }
     }
 }
