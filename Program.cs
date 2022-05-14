@@ -4,9 +4,18 @@ namespace sda_cfence
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            numSequence(5, 2, 2);
+        }
+
+        static void numSequence(int len, int firstElement, int diff)
+        {
+            for (int i = 0; i < len; i++) 
+            {
+                Console.WriteLine(firstElement + diff*i);
+            }
+            
         }
     }
 }
