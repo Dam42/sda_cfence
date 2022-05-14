@@ -12,6 +12,8 @@ namespace sda_cfence
             Console.WriteLine();
             sort(numbers);
             foreach (int num in numbers) Console.Write($"{num} ");
+
+            //To modyfikuje tablicę której używamy, nie wiem czy lepiej tak czy żeby zwracało nową posortowaną a taj nie zmieniało.
         }
 
         static void sort(int[] numbers)
