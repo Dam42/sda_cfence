@@ -15,7 +15,6 @@ namespace sda_cfence
 
         static int Power(int num, int pow)
         {
-            int result = num;
             if (pow != 0) return num * Power(num, pow - 1);
             return 1;
         }
