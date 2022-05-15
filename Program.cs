@@ -1,12 +1,29 @@
-﻿using System;
-
-namespace sda_cfence
+﻿namespace sda_cfence
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Guest[] guests = new Guest[]
+            {
+            new Guest("Nick", "Gurr", 1992),
+            new Employee("Rob", "Graves", 1999, 5_000.99M),
+            new Guest()
+            {
+                FirstName = "Bruh",
+                LastName = "wah",
+                YearOfBirth = 2002
+            }
+            };
+            
+            foreach (var guest in guests)
+            {
+                guest.DumpInfo();
+                if (guest is Employee employee) {
+                    System.Console.WriteLine($"Salary is {employee.Salary}");
+                } 
+            }
         }
     }
 }
