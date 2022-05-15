@@ -2,11 +2,30 @@
 
 namespace sda_cfence
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Pet[] pets = new Pet[] {
+                new Dog("Cerberus"),
+                new Cat("Void"),
+                new Dog("Bladewolf"),
+                new Cat("Fatass")
+            };
+
+            foreach (var pet in pets)
+            {
+                if (pet is Dog dog)
+                {
+                    Console.Write("Pies ");
+                    dog.MakeSound();
+                }
+                else if (pet is Cat cat)
+                {
+                    Console.Write("Kot ");
+                    cat.MakeSound();
+                }
+            }
         }
     }
 }
