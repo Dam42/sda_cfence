@@ -15,15 +15,14 @@ namespace sda_cfence
 
             foreach (var pet in pets)
             {
+                pet.MakeSound();
                 if (pet is Dog dog)
                 {
-                    Console.Write("Pies ");
-                    dog.MakeSound();
+                    Console.WriteLine("Pies ^");
                 }
                 else if (pet is Cat cat)
                 {
-                    Console.Write("Kot ");
-                    cat.MakeSound();
+                    Console.WriteLine("Kot ^");
                 }
             }
         }

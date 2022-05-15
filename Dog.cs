@@ -4,17 +4,9 @@ namespace sda_cfence
 {
     internal class Dog : Pet
     {
-        private string SOUND = "AUGHHH";
-        private string Name { get; }
+        private const string DOG_SOUND = "Hau";
 
-        public Dog(string name)
-        {
-            this.Name = name;
-        }
+        public Dog(string name) : base(name, DOG_SOUND) { }
 
-        public void MakeSound()
-        {
-            Console.WriteLine($"{Name} wydaje dźwięk {SOUND}");
-        }
     }
 }

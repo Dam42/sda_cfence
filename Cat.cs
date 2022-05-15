@@ -1,20 +1,9 @@
-﻿using System;
-
-namespace sda_cfence
+﻿namespace sda_cfence
 {
     internal class Cat : Pet
     {
-        private string SOUND = "Miau";
-        private string Name { get; }
+        private const string CAT_SOUND = "Miau";
 
-        public Cat(string name)
-        {
-            this.Name = name;
-        }
-
-        public void MakeSound()
-        {
-            Console.WriteLine($"{Name} wydaje dziek {SOUND}");
-        }
+        public Cat(string name) : base(name, CAT_SOUND) { }
     }
 }
