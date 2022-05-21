@@ -4,19 +4,17 @@ namespace sda_cfence
 {
     internal class LineSegment
     {
-        private double Xa, Xb, Ya, Yb;
+        MyPoint LineStart, LineEnd;
 
         public LineSegment(MyPoint LineStart, MyPoint LineEnd)
         {
-            this.Xa = LineStart.x;
-            this.Ya = LineStart.y;
-            this.Xb = LineEnd.x;
-            this.Yb = LineEnd.y;
+            this.LineStart = LineStart;
+            this.LineEnd = LineEnd;
         }
 
         public double LineLenght()
         {
-            return Math.Sqrt(Math.Pow((Xb - Xa), 2) + Math.Pow((Yb - Ya), 2));
+            return Math.Sqrt(Math.Pow((LineStart.x - LineEnd.x), 2) + Math.Pow((LineStart.y - LineEnd.y), 2));
         }
     }
 }
