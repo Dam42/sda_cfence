@@ -10,6 +10,7 @@ namespace sda_cfence
         public Circle(double radius)
         {
             this.radius = radius;
+
         }
 
         public double GetArea()

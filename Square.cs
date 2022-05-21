@@ -9,6 +9,7 @@ namespace sda_cfence
         public Square(double side)
         {
             this.side = side;
+
         }
 
         public double GetArea()

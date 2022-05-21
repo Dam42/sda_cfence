@@ -12,6 +12,7 @@ namespace sda_cfence
                 new Circle(5.5),
                 new Square(11),
                 new Square(7.2)
+
             };
 
             double totalArea = 0;
