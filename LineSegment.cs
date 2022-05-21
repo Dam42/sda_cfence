@@ -1,20 +1,26 @@
-﻿using System;
-
-namespace sda_cfence
+﻿namespace sda_cfence
 {
-    internal class LineSegment
+    public class LineSegment
     {
-        MyPoint LineStart, LineEnd;
+        protected MyPoint start;
+        protected MyPoint end;
 
-        public LineSegment(double Xa, double Xb, double Ya, double Yb)
+        public LineSegment(MyPoint start, MyPoint end)
         {
-            this.LineStart = new MyPoint(Xa, Ya);
-            this.LineEnd = new MyPoint(Xb, Yb);
+            this.start = start;
+            this.end = end;
         }
 
-        public double LineLenght()
+        public double GetLength()
         {
-            return Math.Sqrt(Math.Pow((LineStart.X - LineEnd.X), 2) + Math.Pow((LineStart.Y - LineEnd.Y), 2));
+            return start.GetDistanceFromPoint(end);
+        }
+
+        public double Length => GetLength();
+
+        public override string ToString()
+        {
+            return $"{start} -> {end}: {Length}";
         }
     }
 }

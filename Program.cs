@@ -2,21 +2,24 @@
 
 namespace sda_cfence
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            LineSegment line = new(5, 2, 8, 5);
+            Console.WriteLine("2D ->");
+            MyPoint point = new();
+            MyPoint anotherPoint = new(5, 10);
+            LineSegment firstLine = new(point, anotherPoint);
+            Console.WriteLine(firstLine);
 
-            MyPoint point = new(5, 9);
-            MyPoint point2 = new(2, 11);
+            Console.WriteLine("3D ->");
+            MyPoint3D point3D = new();
+            Console.WriteLine(point3D);
+            MyPoint3D anotherPoint3D = new(5, 10, 20);
+            Console.WriteLine(anotherPoint3D);
 
-            MyPoint3D point3D = new(3, 5, 2);
-            MyPoint3D point3D2 = new(5, 7, 8);
-
-            Console.WriteLine( point.GetDistanceFromPoint(point2));
-
-            Console.WriteLine(point3D.GetDistanceFromPoint(point3D2));
+            LineSegment firstLine3D = new(point3D, anotherPoint3D);
+            Console.WriteLine(firstLine3D);
         }
     }
 }

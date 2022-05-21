@@ -6,17 +6,21 @@ namespace sda_cfence
     {
         public double X { get; }
         public double Y { get; }
-        public double Z { get; }
 
-        public MyPoint(double x, double y, double Z = 0)
+        public MyPoint(double x = 0.0, double y = 0.0)
         {
-            this.X = x;
-            this.Y = y;
+            X = x;
+            Y = y;
         }
 
-        public virtual double GetDistanceFromPoint(MyPoint otherPoint)
+        public virtual double GetDistanceFromPoint(MyPoint point)
         {
-            return Math.Sqrt(Math.Pow((this.X - otherPoint.X), 2) + Math.Pow((this.Y - otherPoint.Y), 2));
+            return Math.Sqrt(Math.Pow((X - point.X), 2) + Math.Pow((Y - point.Y), 2));
+        }
+
+        public override string ToString()
+        {
+            return $"({X},{Y})";
         }
     }
 }
