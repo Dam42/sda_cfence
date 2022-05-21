@@ -6,15 +6,15 @@ namespace sda_cfence
     {
         MyPoint LineStart, LineEnd;
 
-        public LineSegment(double startX, double startY, double endX, double endY)
+        public LineSegment(double Xa, double Xb, double Ya, double Yb)
         {
-            this.LineStart = new MyPoint(startX, startY);
-            this.LineEnd = new MyPoint(endX, endY);
+            this.LineStart = new MyPoint(Xa, Ya);
+            this.LineEnd = new MyPoint(Xb, Yb);
         }
 
         public double LineLenght()
         {
-            return Math.Sqrt(Math.Pow((LineStart.x - LineEnd.x), 2) + Math.Pow((LineStart.y - LineEnd.y), 2));
+            return Math.Sqrt(Math.Pow((LineStart.X - LineEnd.X), 2) + Math.Pow((LineStart.Y - LineEnd.Y), 2));
         }
     }
 }
