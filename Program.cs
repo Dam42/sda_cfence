@@ -6,9 +6,9 @@ namespace sda_cfence
     {
         static void Main(string[] args)
         {
-            LineSegment line = new(new MyPoint(5, 2), new MyPoint(8, 5));
+            LineSegment line = new(5, 2, 8, 5);
 
-            Console.WriteLine(line.LineLenght() ); 
+            Console.WriteLine(line.LineLenght()); 
         }
     }
 }

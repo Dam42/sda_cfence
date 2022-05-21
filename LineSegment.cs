@@ -6,10 +6,10 @@ namespace sda_cfence
     {
         MyPoint LineStart, LineEnd;
 
-        public LineSegment(MyPoint LineStart, MyPoint LineEnd)
+        public LineSegment(double startX, double startY, double endX, double endY)
         {
-            this.LineStart = LineStart;
-            this.LineEnd = LineEnd;
+            this.LineStart = new MyPoint(startX, startY);
+            this.LineEnd = new MyPoint(endX, endY);
         }
 
         public double LineLenght()
